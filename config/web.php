@@ -5,6 +5,20 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'modules' => [
+        'api' => [
+            'class' => 'app\modules\api\Module',
+        ],
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+        ],
+        'manager' => [
+            'class' => 'app\modules\manager\Module',
+        ],
+        'advertiser' => [
+            'class' => 'app\modules\advertiser\Module',
+        ]
+    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
