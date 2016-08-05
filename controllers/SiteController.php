@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Users;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -60,6 +61,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $x = new Users();
+        $x->username = "dsa";
+        $x->passwrod = "12345";
+        $x->phone = "456 21 489";
+        $x->save();
         return $this->render('index');
     }
 

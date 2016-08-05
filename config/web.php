@@ -6,6 +6,14 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'modules' => [
+        'giimongo' => [
+            'class' => 'yii\gii\Module',
+            'generators' => [
+                'mongoDbModel' => [
+                    'class' => 'yii\mongodb\gii\model\Generator'
+                ]
+            ],
+        ],
         'api' => [
             'class' => 'app\modules\api\Module',
         ],
@@ -20,6 +28,10 @@ $config = [
         ]
     ],
     'components' => [
+        'mongodb' => [
+            'class' => '\yii\mongodb\Connection',
+            'dsn' => 'mongodb://localhost:27017/flayer',
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'PpAoD3B2OsQEEkVOp_RlMD7Ro2Q-l45K',
