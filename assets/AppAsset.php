@@ -24,6 +24,8 @@ class AppAsset extends AssetBundle
         'css/styles.css'
     ];
     public $js = [
+        'js/flexnav.min.js',
+        'js/custom.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
