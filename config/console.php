@@ -11,6 +11,10 @@ $config = [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'app\commands',
     'components' => [
+        'mongodb' => [
+            'class' => '\yii\mongodb\Connection',
+            'dsn' => 'mongodb://localhost:27017/flayer',
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
@@ -25,6 +29,11 @@ $config = [
         'db' => $db,
     ],
     'params' => $params,
+    'controllerMap' => [
+        'mongodb-migrate' => [
+            'class' => 'yii\mongodb\console\controllers\MigrateController'
+        ]
+    ],
     /*
     'controllerMap' => [
         'fixture' => [ // Fixture generation command line.

@@ -25,7 +25,19 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             /*'_id',*/
-            'image',
+            //'image',
+            [
+                'attribute' => 'image',
+                'format' => 'html',
+                'label' => 'Изображение флаера',
+                'value' => function ($data) {
+                    return Html::img($data['image'],
+                        ['style' => [
+                            'width' => '250px'
+                        ]
+                        ]);
+                },
+            ],
             'name',
             'type',
             'discount',
