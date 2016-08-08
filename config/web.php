@@ -69,7 +69,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '<alias:about>' => 'site/<alias>',
+                '<alias:login|register>' => 'site/<alias>',
             ],
         ],
 
