@@ -4,7 +4,7 @@
             <div class="row row-wrap">
                 <div class="col-md-3">
                     <a href="index.html">
-                        <img src="img/logo.png" alt="logo" title="logo" class="logo">
+                        <img src="/img/logo.png" alt="logo" title="logo" class="logo">
                     </a>
                     <ul class="list list-social">
                         <li>
@@ -50,7 +50,7 @@
                     <ul class="thumb-list">
                         <li>
                             <a href="#">
-                                <img src="img/70x70.png" alt="Image Alternative text"
+                                <img src="/img/70x70.png" alt="Image Alternative text"
                                      title="Urbex Esch/Lux with Laney and Laaaaag"/>
                             </a>
                             <div class="thumb-list-item-caption">
@@ -61,7 +61,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="img/70x70.png" alt="Image Alternative text" title="AMaze"/>
+                                <img src="/img/70x70.png" alt="Image Alternative text" title="AMaze"/>
                             </a>
                             <div class="thumb-list-item-caption">
                                 <p class="thumb-list-item-meta">Jul 18, 2014</p>
@@ -71,7 +71,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="img/70x70.png" alt="Image Alternative text"
+                                <img src="/img/70x70.png" alt="Image Alternative text"
                                      title="The Hidden Power of the Heart"/>
                             </a>
                             <div class="thumb-list-item-caption">
@@ -95,31 +95,31 @@
                     <div class="pull-right">
                         <ul class="list-inline list-payment">
                             <li>
-                                <img src="img/payment/american-express-curved-32px.png" alt="Image Alternative text"
+                                <img src="/img/payment/american-express-curved-32px.png" alt="Image Alternative text"
                                      title="Image Title"/>
                             </li>
                             <li>
-                                <img src="img/payment/cirrus-curved-32px.png" alt="Image Alternative text"
+                                <img src="/img/payment/cirrus-curved-32px.png" alt="Image Alternative text"
                                      title="Image Title"/>
                             </li>
                             <li>
-                                <img src="img/payment/discover-curved-32px.png" alt="Image Alternative text"
+                                <img src="/img/payment/discover-curved-32px.png" alt="Image Alternative text"
                                      title="Image Title"/>
                             </li>
                             <li>
-                                <img src="img/payment/ebay-curved-32px.png" alt="Image Alternative text"
+                                <img src="/img/payment/ebay-curved-32px.png" alt="Image Alternative text"
                                      title="Image Title"/>
                             </li>
                             <li>
-                                <img src="img/payment/maestro-curved-32px.png" alt="Image Alternative text"
+                                <img src="/img/payment/maestro-curved-32px.png" alt="Image Alternative text"
                                      title="Image Title"/>
                             </li>
                             <li>
-                                <img src="img/payment/mastercard-curved-32px.png" alt="Image Alternative text"
+                                <img src="/img/payment/mastercard-curved-32px.png" alt="Image Alternative text"
                                      title="Image Title"/>
                             </li>
                             <li>
-                                <img src="img/payment/visa-curved-32px.png" alt="Image Alternative text"
+                                <img src="/img/payment/visa-curved-32px.png" alt="Image Alternative text"
                                      title="Image Title"/>
                             </li>
                         </ul>

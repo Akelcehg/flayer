@@ -6,7 +6,7 @@ use yii\widgets\Menu;
 <div class="top-main-area text-center">
     <div class="container">
         <a href="index.html" class="logo mt5">
-            <img src="img/logo-small-dark.png" alt="Image Alternative text" title="Image Title"/>
+            <img src="/img/logo-small-dark.png" alt="Image Alternative text" title="Image Title"/>
         </a>
     </div>
 </div>
@@ -27,9 +27,14 @@ use yii\widgets\Menu;
                             ['label' => 'Админка', 'url' => ['/admin'],
                                 'active' => Yii::$app->request->getUrl() == Url::toRoute(['/admin'])],
                             ['label' => 'Рекламодатель', 'url' => ['/advertiser'],
+                                //'active' => Yii::$app->request->getUrl() == Url::toRoute(['/advertiser']),
                                 'items' => [
-                                    ['label' => 'Мои флаера', 'url' => ['/advertiser/flayer_list']],
-                                    ['label' => 'Создать флаер', 'url' => ['/advertiser/flayer/create']],
+                                    ['label' => 'Мои флаера', 'url' => ['/advertiser/flayer'],
+                                        'active' => Yii::$app->request->getUrl() == Url::toRoute(['/advertiser/flayer'])
+                                    ],
+                                    ['label' => 'Создать флаер', 'url' => ['/advertiser/flayer/create'],
+                                        'active' => Yii::$app->request->getUrl() == Url::toRoute(['/advertiser/flayer/create'])
+                                    ],
                                 ],
                                 'options' => [
                                     "class" => "item-with-ul",
@@ -69,14 +74,14 @@ use yii\widgets\Menu;
                             <ul class="shopping-cart-items">
                                 <li>
                                     <a href="product-shop-sidebar.html">
-                                        <img src="img/70x70.png" alt="Image Alternative text" title="AMaze"/>
+                                        <img src="/img/70x70.png" alt="Image Alternative text" title="AMaze"/>
                                         <h5>New Glass Collection</h5><span
                                             class="shopping-cart-item-price">$150</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="product-shop-sidebar.html">
-                                        <img src="img/70x70.png" alt="Image Alternative text" title="Gamer Chick"/>
+                                        <img src="/img/70x70.png" alt="Image Alternative text" title="Gamer Chick"/>
                                         <h5>Playstation Accessories</h5><span
                                             class="shopping-cart-item-price">$170</span>
                                     </a>
@@ -196,7 +201,7 @@ use yii\widgets\Menu;
          data-white-pagination="true" data-nav="false">
         <div>
             <div class="bg-holder">
-                <img src="img/1200x480.png" alt="Image Alternative text" title="Bridge"/>
+                <img src="/img/1200x480.png" alt="Image Alternative text" title="Bridge"/>
                 <div class="bg-mask"></div>
                 <div class="bg-front vert-center text-white text-center">
                     <h2 class="text-hero">London Weekends</h2>
@@ -207,7 +212,7 @@ use yii\widgets\Menu;
         </div>
         <div>
             <div class="bg-holder">
-                <img src="img/1200x480.png" alt="Image Alternative text" title="4 Strokes of Fun"/>
+                <img src="/img/1200x480.png" alt="Image Alternative text" title="4 Strokes of Fun"/>
                 <div class="bg-mask"></div>
                 <div class="bg-front vert-center text-white text-center">
                     <h2 class="text-hero">Adrenaline Madness</h2>
@@ -218,7 +223,7 @@ use yii\widgets\Menu;
         </div>
         <div>
             <div class="bg-holder">
-                <img src="img/1200x480.png" alt="Image Alternative text"
+                <img src="/img/1200x480.png" alt="Image Alternative text"
                      title="LHOTEL PORTO BAY SAO PAULO luxury suite"/>
                 <div class="bg-mask"></div>
                 <div class="bg-front vert-center text-white text-center">
