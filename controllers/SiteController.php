@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Flayer;
 use app\models\SignupForm;
 use app\models\Users;
 use Yii;
@@ -62,7 +63,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        return $this->render('index',[
+            'flayers' => Flayer::find()->all()
+        ]);
     }
 
     /**

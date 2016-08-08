@@ -1,4 +1,5 @@
 <?php
+use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\Menu;
 
@@ -19,29 +20,33 @@ use yii\widgets\Menu;
 
                 <nav>
 
-                    <?= Menu::widget([
-                        'items' => [
-                            ['label' => 'Главная', 'url' => ['/'],
-                                'active' => Yii::$app->request->getUrl() == Url::toRoute(['/']),
-                            ],
-                            ['label' => 'Админка', 'url' => ['/admin'],
-                                'active' => Yii::$app->request->getUrl() == Url::toRoute(['/admin'])],
-                            ['label' => 'Рекламодатель', 'url' => ['/advertiser'],
-                                //'active' => Yii::$app->request->getUrl() == Url::toRoute(['/advertiser']),
-                                'items' => [
-                                    ['label' => 'Мои флаера', 'url' => ['/advertiser/flayer'],
-                                        'active' => Yii::$app->request->getUrl() == Url::toRoute(['/advertiser/flayer'])
-                                    ],
-                                    ['label' => 'Создать флаер', 'url' => ['/advertiser/flayer/create'],
-                                        'active' => Yii::$app->request->getUrl() == Url::toRoute(['/advertiser/flayer/create'])
-                                    ],
+                    <?php
+                    $menuItems = [['label' => 'Главная', 'url' => ['/'],
+                        'active' => Yii::$app->request->getUrl() == Url::toRoute(['/']),
+                    ],
+                        ['label' => 'Админка', 'url' => ['/admin'],
+                            'active' => Yii::$app->request->getUrl() == Url::toRoute(['/admin'])],
+                        ['label' => 'Рекламодатель', 'url' => ['/advertiser'],
+                            //'active' => Yii::$app->request->getUrl() == Url::toRoute(['/advertiser']),
+                            'items' => [
+                                ['label' => 'Мои флаера', 'url' => ['/advertiser/flayer'],
+                                    'active' => Yii::$app->request->getUrl() == Url::toRoute(['/advertiser/flayer'])
                                 ],
-                                'options' => [
-                                    "class" => "item-with-ul",
+                                ['label' => 'Создать флаер', 'url' => ['/advertiser/flayer/create'],
+                                    'active' => Yii::$app->request->getUrl() == Url::toRoute(['/advertiser/flayer/create'])
                                 ],
                             ],
-                            ['label' => 'Менеджер', 'url' => ['/manager']/*, 'visible' => Yii::$app->user->isGuest*/],
+                            'options' => [
+                                "class" => "item-with-ul",
+                            ],
                         ],
+                        ['label' => 'Менеджер', 'url' => ['/manager']/*, 'visible' => Yii::$app->user->isGuest*/]];
+
+                    ?>
+
+
+                    <?= Menu::widget([
+                        'items' => $menuItems,
                         'options' => [
                             "class" => "nav nav-pills flexnav",
                             "id" => 'flexnav'
@@ -51,56 +56,30 @@ use yii\widgets\Menu;
 
                     ]); ?>
 
-
-                    <!--                    <ul class="nav nav-pills flexnav" id="flexnav" data-breakpoint="800">
-                                            <li class=""><a href="blog-sidebar-right.html">Главная</a>
-                                            </li>
-                                            <li class=""><a href="blog-sidebar-right.html">Админка</a>
-                                            </li>
-                                            <li class=""><a href="blog-sidebar-right.html">Рекламодатель</a>
-                                            </li>
-                                            <li class=""><a href="blog-sidebar-right.html">Менеджер</a>
-                                            </li>
-                                        </ul>-->
                 </nav>
                 <!-- END MAIN NAVIGATION -->
             </div>
             <div class="col-md-6">
                 <!-- LOGIN REGISTER LINKS -->
                 <ul class="login-register">
-                    <li class="shopping-cart"><a href="page-cart.html"><i class="fa fa-shopping-cart"></i>My
-                            Cart</a>
-                        <div class="shopping-cart-box">
-                            <ul class="shopping-cart-items">
-                                <li>
-                                    <a href="product-shop-sidebar.html">
-                                        <img src="/img/70x70.png" alt="Image Alternative text" title="AMaze"/>
-                                        <h5>New Glass Collection</h5><span
-                                            class="shopping-cart-item-price">$150</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="product-shop-sidebar.html">
-                                        <img src="/img/70x70.png" alt="Image Alternative text" title="Gamer Chick"/>
-                                        <h5>Playstation Accessories</h5><span
-                                            class="shopping-cart-item-price">$170</span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul class="list-inline text-center">
-                                <li><a href="page-cart.html"><i class="fa fa-shopping-cart"></i> View Cart</a>
-                                </li>
-                                <li><a href="page-checkout.html"><i class="fa fa-check-square"></i> Checkout</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a class="popup-text" href="#login-dialog" data-effect="mfp-move-from-top"><i
+
+                    <?php if (Yii::$app->user->isGuest) { ?>
+
+                        <li><?= Html::a('Signup', '/register') ?></li>
+                        <li><?= Html::a('Login', '/login') ?></li>
+
+                    <?php } else { ?>
+                        <li>
+                            <?= Html::a('Выйти (' . Yii::$app->user->identity->email . ')', '/site/logout', ['data' => ['method' => 'post',]]) ?>
+                        </li>
+                    <?php } ?>
+
+                    <!--<li><a class="popup-text" href="#login-dialog" data-effect="mfp-move-from-top"><i
                                 class="fa fa-sign-in"></i>Sign in</a>
                     </li>
                     <li><a class="popup-text" href="#register-dialog" data-effect="mfp-move-from-top"><i
                                 class="fa fa-edit"></i>Sign up</a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </div>
