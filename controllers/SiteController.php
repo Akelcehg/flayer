@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Flayer;
+use app\models\SearchFlayer;
 use app\models\SignupForm;
 use app\models\Users;
 use Yii;
@@ -63,9 +64,17 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $searchModel = new SearchFlayer();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+   /*
         return $this->render('index',[
             'flayers' => Flayer::find()->all()
-        ]);
+        ]);*/
     }
 
     /**

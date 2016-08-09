@@ -1,7 +1,9 @@
 <?php
 
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use \app\models\FlayerGroup;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Flayer */
@@ -18,7 +20,12 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'type') ?>
 
+    <?= $form->field($model, 'category')->dropDownList(
+        ArrayHelper::map(FlayerGroup::find()->all(), 'name', 'name'), ['prompt' => 'Категория флаера']); ?>
+
     <?= $form->field($model, 'discount') ?>
+
+    <?= $form->field($model, 'description') ?>
 
     <?= $form->field($model, 'data_end') ?>
 

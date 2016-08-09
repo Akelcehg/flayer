@@ -1,3 +1,7 @@
+<?php
+use yii\widgets\ListView;
+
+?>
 <div class="row">
     <div class="col-md-3">
         <aside class="sidebar-left">
@@ -5,7 +9,7 @@
             <ul class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left">
                 <li><a href="#"><i class="fa fa-cutlery"></i>Food &amp; Drink<span>50</span></a>
                 </li>
-                <li><a href="#"><i class="fa fa-calendar"></i>Events<span>49</span></a>
+                <li><a href="category/Events"><i class="fa fa-calendar"></i>Events<span>49</span></a>
                 </li>
                 <li><a href="#"><i class="fa fa-female"></i>Beauty<span>37</span></a>
                 </li>
@@ -31,27 +35,36 @@
             <small><a href="#">View All</a></small>
         </h1>
         <div class="row row-wrap">
-            <?php foreach ($flayers as $flayer):?>
-                <a class="col-md-4" href="#">
+
+            <?php $widget = ListView::begin([
+                'dataProvider' => $dataProvider,
+                'summary' => '',
+                'itemOptions' => ['class' => 'item'],
+                'itemView' => function ($model, $key, $index, $widget) {
+                    return '<a class="col-md-4" href="#">
                     <div class="product-thumb">
                         <header class="product-header">
-                            <img src="<?=$flayer->image?>" alt="Image Alternative text"
+                            <img src="'.$model['image'].'" alt="Image Alternative text"
                                  title="the best mode of transport here in maldives">
                         </header>
                         <div class="product-inner">
-                            <h5 class="product-title"><?=$flayer->name?></h5>
-                            <p class="product-desciption">Habitant class blandit arcu parturient at litora per</p>
+                            <h5 class="product-title">'.$model['name'].'</h5>
+                            <p class="product-desciption">'.$model['description'].'</p>
                             <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 4 days 32 h remaining</span>
                                 <ul class="product-price-list">
-                                    <li><span class="product-save">Save <?=$flayer->discount?> %</span>
+                                    <li><span class="product-save">Save '.$model['discount'].' %</span>
                                     </li>
                                 </ul>
                             </div>
                             <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
                         </div>
                     </div>
-                </a>
-            <?php endforeach;?>
+                </a>';
+                },
+            ]) ?>
+
+            <?php echo $widget->renderItems(); ?>
+
 
             <!--<a class="col-md-4" href="#">
                 <div class="product-thumb">

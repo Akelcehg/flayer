@@ -25,6 +25,10 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'js/flexnav.min.js',
+        'js/icheck.js',
+        'js/nicescroll.js',
+        'js/ionrangeslider.js',
+        'js/magnific.min.js',
         'js/custom.js'
     ];
     public $depends = [

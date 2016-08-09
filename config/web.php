@@ -70,6 +70,7 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 '<alias:login|register>' => 'site/<alias>',
+                'category/<name>' => 'category/index',
             ],
         ],
 

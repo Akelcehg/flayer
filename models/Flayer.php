@@ -12,6 +12,7 @@ use Yii;
  * @property mixed $name
  * @property mixed $type
  * @property mixed $discount
+ * @property mixed $description
  * @property mixed $category
  * @property mixed $data_end
  */
@@ -36,6 +37,7 @@ class Flayer extends \yii\mongodb\ActiveRecord
             'name',
             'type',
             'category',
+            'description',
             'discount',
             'data_end',
         ];
@@ -47,7 +49,8 @@ class Flayer extends \yii\mongodb\ActiveRecord
     public function rules()
     {
         return [
-            [['image', 'name', 'type','category', 'discount', 'data_end'], 'safe']
+            [['image', 'name', 'type', 'category', 'description', 'discount', 'data_end'], 'safe'],
+            [['image', 'name', 'type', 'category', 'discount'], 'required'],
         ];
     }
 
@@ -62,6 +65,7 @@ class Flayer extends \yii\mongodb\ActiveRecord
             'name' => 'Name',
             'type' => 'Type',
             'discount' => 'Discount',
+            'description' => 'Description',
             'data_end' => 'Data End',
         ];
     }

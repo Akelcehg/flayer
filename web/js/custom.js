@@ -75,14 +75,14 @@ if ($('body').hasClass('sticky-header')) {
 }
 
 // Price slider
-/*$("#price-slider").ionRangeSlider({
+$("#price-slider").ionRangeSlider({
     min: 130,
     max: 575,
     type: 'double',
     prefix: "$",
     prettify: false,
     hasGrid: false
-});*/
+});
 
 // Responsive navigation
 $('#flexnav').flexNav();
@@ -306,7 +306,7 @@ $(document).ready(function() {
     var docHeight = $(window).height();
    var footerHeight = $('#main-footer').height();
    var footerTop = $('#main-footer').position().top + footerHeight;
-   
+
    if (footerTop < docHeight) {
     $('#main-footer').css('margin-top', (docHeight - footerTop) + 'px');
    }
