@@ -2,6 +2,7 @@
 
 namespace app\modules\advertiser\controllers;
 
+use app\models\FlayerGroup;
 use Yii;
 use app\models\Flayer;
 use app\models\SearchFlayer;
@@ -66,6 +67,7 @@ class FlayerController extends Controller
         $model = new Flayer();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            FlayerGroup::updateAllCounters(['count' => 1], ['name' => $model->category]);
             return $this->redirect(['view', 'id' => (string)$model->_id]);
         } else {
             return $this->render('create', [
@@ -83,8 +85,12 @@ class FlayerController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
+        $previousCategory = $model->category;
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+            FlayerGroup::updateAllCounters(['count' => -1], ['name' => $previousCategory]);
+            FlayerGroup::updateAllCounters(['count' => 1], ['name' => $model->category]);
+
             return $this->redirect(['view', 'id' => (string)$model->_id]);
         } else {
             return $this->render('update', [

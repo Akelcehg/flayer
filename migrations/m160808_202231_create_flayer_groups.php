@@ -6,16 +6,16 @@ class m160808_202231_create_flayer_groups extends \yii\mongodb\Migration
     {
         $this->createCollection('flayer_groups');
         $this->batchInsert('flayer_groups', [
-            ['name' => 'FOOD & DRINK'],
-            ['name' => 'EVENTS'],
-            ['name' => 'BEAUTY'],
-            ['name' => 'FITNESS'],
-            ['name' => 'ELECTRONICS'],
-            ['name' => 'FURNITURE'],
-            ['name' => 'FASHION'],
-            ['name' => 'SHOPPING'],
-            ['name' => 'HOME & GARDEN'],
-            ['name' => 'TRAVEL'],
+            ['name' => 'FOOD & DRINK', 'count' => 0],
+            ['name' => 'EVENTS', 'count' => 0],
+            ['name' => 'BEAUTY', 'count' => 0],
+            ['name' => 'FITNESS', 'count' => 0],
+            ['name' => 'ELECTRONICS', 'count' => 0],
+            ['name' => 'FURNITURE', 'count' => 0],
+            ['name' => 'FASHION', 'count' => 0],
+            ['name' => 'SHOPPING', 'count' => 0],
+            ['name' => 'HOME & GARDEN', 'count' => 0],
+            ['name' => 'TRAVEL', 'count' => 0],
         ]);
     }
 

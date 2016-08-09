@@ -28,6 +28,7 @@ class FlayerGroup extends \yii\mongodb\ActiveRecord
         return [
             '_id',
             'name',
+            'count',
         ];
     }
 
@@ -37,7 +38,7 @@ class FlayerGroup extends \yii\mongodb\ActiveRecord
     public function rules()
     {
         return [
-            [['name'], 'safe']
+            [['name', 'count'], 'safe']
         ];
     }
 
@@ -49,6 +50,12 @@ class FlayerGroup extends \yii\mongodb\ActiveRecord
         return [
             '_id' => 'ID',
             'name' => 'Name',
+            'count' => 'Count'
         ];
+    }
+
+    public static function getFlayerGroupsAndCount()
+    {
+        return FlayerGroup::find()->all();
     }
 }

@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Flayer;
+use app\models\FlayerGroup;
 use app\models\SearchFlayer;
 use app\models\SignupForm;
 use app\models\Users;
@@ -31,7 +32,8 @@ class CategoryController extends Controller
         $dataProvider = $searchModel->search($filter);
 
         return $this->render('index', [
-            'dataProvider' => $dataProvider
+            'dataProvider' => $dataProvider,
+            'flayerGroups' => FlayerGroup::getFlayerGroupsAndCount(),
         ]);
     }
 

@@ -39,6 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
             ],
             'name',
+            'category',
             'type',
             'discount',
             // 'data_end',

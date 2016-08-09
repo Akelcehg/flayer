@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Flayer;
+use app\models\FlayerGroup;
 use app\models\SearchFlayer;
 use app\models\SignupForm;
 use app\models\Users;
@@ -70,11 +71,8 @@ class SiteController extends Controller
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'flayerGroups' => FlayerGroup::getFlayerGroupsAndCount(),
         ]);
-   /*
-        return $this->render('index',[
-            'flayers' => Flayer::find()->all()
-        ]);*/
     }
 
     /**

@@ -7,26 +7,15 @@ use yii\widgets\ListView;
         <aside class="sidebar-left">
             <h3 class="mb20">Поиск по категории</h3>
             <ul class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left">
-                <li><a href="/category/Food & Drink"><i class="fa fa-cutlery"></i>Food &amp; Drink<span>50</span></a>
-                </li>
-                <li><a href="/category/Events"><i class="fa fa-calendar"></i>Events<span>49</span></a>
-                </li>
-                <li><a href="/category/Beauty"><i class="fa fa-female"></i>Beauty<span>37</span></a>
-                </li>
-                <li><a href="/category/Fitness"><i class="fa fa-bolt"></i>Fitness<span>36</span></a>
-                </li>
-                <li><a href="/category/Electronics"><i class="fa fa-headphones"></i>Electronics<span>48</span></a>
-                </li>
-                <li><a href="/category/Furniture"><i class="fa fa-image"></i>Furniture<span>31</span></a>
-                </li>
-                <li><a href="/category/Fashion"><i class="fa fa-umbrella"></i>Fashion<span>40</span></a>
-                </li>
-                <li><a href="/category/Shopping"><i class="fa fa-shopping-cart"></i>Shopping<span>33</span></a>
-                </li>
-                <li><a href="/category/Home & Garden"><i class="fa fa-home"></i>Home &amp; Garden<span>44</span></a>
-                </li>
-                <li><a href="/category/Travel"><i class="fa fa-plane"></i>Travel<span>38</span></a>
-                </li>
+
+                <?php foreach ($flayerGroups as $group): ?>
+
+                    <?php echo '<li><a href="/category/' . $group['name'] . '">
+                                <i class="fa fa-cutlery"></i>' . $group['name'] . '<span>
+                                ' . $group['count'] . '</span></a>
+                    </li>'; ?>
+
+                <?php endforeach; ?>
             </ul>
         </aside>
     </div>
@@ -44,15 +33,15 @@ use yii\widgets\ListView;
                     return '<a class="col-md-4" href="#">
                     <div class="product-thumb">
                         <header class="product-header">
-                            <img src="'.$model['image'].'" alt="Image Alternative text"
+                            <img src="' . $model['image'] . '" alt="Image Alternative text"
                                  title="the best mode of transport here in maldives">
                         </header>
                         <div class="product-inner">
-                            <h5 class="product-title">'.$model['name'].'</h5>
-                            <p class="product-desciption">'.$model['description'].'</p>
+                            <h5 class="product-title">' . $model['name'] . '</h5>
+                            <p class="product-desciption">' . $model['description'] . '</p>
                             <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 4 days 32 h remaining</span>
                                 <ul class="product-price-list">
-                                    <li><span class="product-save">Save '.$model['discount'].' %</span>
+                                    <li><span class="product-save">Save ' . $model['discount'] . ' %</span>
                                     </li>
                                 </ul>
                             </div>
