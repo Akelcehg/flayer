@@ -18,8 +18,21 @@ class CategoryController extends Controller
 
     public function actionIndex($name)
     {
+        $filter = null;
+        if ($name) {
+            $filter = [
+                "SearchFlayer" => [
+                    "category" => $name
+                ]
+            ];
+        }
 
-        return $this->render('index');
+        $searchModel = new SearchFlayer();
+        $dataProvider = $searchModel->search($filter);
+
+        return $this->render('index', [
+            'dataProvider' => $dataProvider
+        ]);
     }
 
 

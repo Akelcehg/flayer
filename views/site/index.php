@@ -5,27 +5,27 @@ use yii\widgets\ListView;
 <div class="row">
     <div class="col-md-3">
         <aside class="sidebar-left">
-            <h3 class="mb20">I am Looking For</h3>
+            <h3 class="mb20">Поиск по категории</h3>
             <ul class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left">
-                <li><a href="#"><i class="fa fa-cutlery"></i>Food &amp; Drink<span>50</span></a>
+                <li><a href="/category/Food & Drink"><i class="fa fa-cutlery"></i>Food &amp; Drink<span>50</span></a>
                 </li>
-                <li><a href="category/Events"><i class="fa fa-calendar"></i>Events<span>49</span></a>
+                <li><a href="/category/Events"><i class="fa fa-calendar"></i>Events<span>49</span></a>
                 </li>
-                <li><a href="#"><i class="fa fa-female"></i>Beauty<span>37</span></a>
+                <li><a href="/category/Beauty"><i class="fa fa-female"></i>Beauty<span>37</span></a>
                 </li>
-                <li><a href="#"><i class="fa fa-bolt"></i>Fitness<span>36</span></a>
+                <li><a href="/category/Fitness"><i class="fa fa-bolt"></i>Fitness<span>36</span></a>
                 </li>
-                <li><a href="#"><i class="fa fa-headphones"></i>Electronics<span>48</span></a>
+                <li><a href="/category/Electronics"><i class="fa fa-headphones"></i>Electronics<span>48</span></a>
                 </li>
-                <li><a href="#"><i class="fa fa-image"></i>Furniture<span>31</span></a>
+                <li><a href="/category/Furniture"><i class="fa fa-image"></i>Furniture<span>31</span></a>
                 </li>
-                <li><a href="#"><i class="fa fa-umbrella"></i>Fashion<span>40</span></a>
+                <li><a href="/category/Fashion"><i class="fa fa-umbrella"></i>Fashion<span>40</span></a>
                 </li>
-                <li><a href="#"><i class="fa fa-shopping-cart"></i>Shopping<span>33</span></a>
+                <li><a href="/category/Shopping"><i class="fa fa-shopping-cart"></i>Shopping<span>33</span></a>
                 </li>
-                <li><a href="#"><i class="fa fa-home"></i>Home &amp; Graden<span>44</span></a>
+                <li><a href="/category/Home & Garden"><i class="fa fa-home"></i>Home &amp; Garden<span>44</span></a>
                 </li>
-                <li><a href="#"><i class="fa fa-plane"></i>Travel<span>38</span></a>
+                <li><a href="/category/Travel"><i class="fa fa-plane"></i>Travel<span>38</span></a>
                 </li>
             </ul>
         </aside>

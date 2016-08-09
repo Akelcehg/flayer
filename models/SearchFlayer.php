@@ -18,7 +18,7 @@ class SearchFlayer extends Flayer
     public function rules()
     {
         return [
-            [['_id', 'image', 'name', 'type', 'discount', 'data_end'], 'safe'],
+            [['_id', 'image','category', 'name', 'type', 'discount', 'data_end'], 'safe'],
         ];
     }
 
@@ -61,6 +61,7 @@ class SearchFlayer extends Flayer
             ->andFilterWhere(['like', 'image', $this->image])
             ->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'type', $this->type])
+            ->andFilterWhere(['like', 'category', $this->category])
             ->andFilterWhere(['like', 'discount', $this->discount])
             ->andFilterWhere(['like', 'data_end', $this->data_end]);
 
