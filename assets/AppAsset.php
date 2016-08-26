@@ -21,7 +21,8 @@ class AppAsset extends AssetBundle
         'css/font_awesome.css',
         'css/ie.css',
         'css/mystyles.css',
-        'css/styles.css'
+        'css/styles.css',
+        'css/orient.css'
     ];
     public $js = [
         'js/flexnav.min.js',

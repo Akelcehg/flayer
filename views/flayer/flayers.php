@@ -82,6 +82,89 @@ use yii\widgets\ListView;
         </div>
         <div class="col-md-9">
 
+            <div class="owl-carousel owl-slider owl-theme" id="owl-carousel-slider" data-pagination="false"
+                 data-nav="top-right" style="opacity: 1; display: block;">
+                <div class="owl-wrapper-outer">
+                    <div class="owl-wrapper" style="width: 5088px; left: 0px; display: block;">
+                        <div class="owl-item" style="width: 848px;">
+                            <div>
+                                <div class="bg-holder">
+                                    <img src="img/bridge_900x500.jpg" alt="Image Alternative text" title="Bridge">
+                                    <div class="text-white text-center slider-caption slider-caption-bottom">
+                                        <h2 class="text-uc">London Weekends</h2>
+                                        <div class="countdown countdown-big" data-countdown="1472684707124">
+                                            <div class="days"><span class="count">05</span><span
+                                                    class="title">Days</span></div>
+                                            <div class="hours"><span class="count">09</span><span
+                                                    class="title">Hours</span></div>
+                                            <div class="minutes"><span class="count">44</span><span class="title">Minutes</span>
+                                            </div>
+                                            <div class="seconds"><span class="count">11</span><span class="title">Seconds</span>
+                                            </div>
+                                        </div>
+                                        <a class="btn btn-lg btn-ghost btn-white" href="#">Save 50% Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: 848px;">
+                            <div>
+                                <div class="bg-holder">
+                                    <img src="img/4_strokes_of_fun_900x500.jpg" alt="Image Alternative text"
+                                         title="4 Strokes of Fun">
+                                    <div class="text-white text-center slider-caption slider-caption-bottom">
+                                        <h2 class="text-uc">Adrenaline Madness</h2>
+                                        <div class="countdown countdown-big" data-countdown="1472684707125">
+                                            <div class="days"><span class="count">05</span><span
+                                                    class="title">Days</span></div>
+                                            <div class="hours"><span class="count">09</span><span
+                                                    class="title">Hours</span></div>
+                                            <div class="minutes"><span class="count">44</span><span class="title">Minutes</span>
+                                            </div>
+                                            <div class="seconds"><span class="count">11</span><span class="title">Seconds</span>
+                                            </div>
+                                        </div>
+                                        <a class="btn btn-lg btn-ghost btn-white" href="#">Save 90% Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: 848px;">
+                            <div>
+                                <div class="bg-holder">
+                                    <img src="img/lhotel_porto_bay_sao_paulo_luxury_suite_900x500.jpg"
+                                         alt="Image Alternative text" title="LHOTEL PORTO BAY SAO PAULO luxury suite">
+                                    <div class="text-white text-center slider-caption slider-caption-bottom">
+                                        <h2 class="text-uc">Premium Apartments</h2>
+                                        <div class="countdown countdown-big" data-countdown="1472684707125">
+                                            <div class="days"><span class="count">05</span><span
+                                                    class="title">Days</span></div>
+                                            <div class="hours"><span class="count">09</span><span
+                                                    class="title">Hours</span></div>
+                                            <div class="minutes"><span class="count">44</span><span class="title">Minutes</span>
+                                            </div>
+                                            <div class="seconds"><span class="count">11</span><span class="title">Seconds</span>
+                                            </div>
+                                        </div>
+                                        <a class="btn btn-lg btn-ghost btn-white" href="#">Save 90% Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="owl-controls clickable">
+                    <div class="owl-buttons">
+                        <div class="owl-prev"></div>
+                        <div class="owl-next"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gap"></div>
+
             <div class="row row-wrap">
                 <div class="col-md-4">
                     <div class="product-thumb">
@@ -121,7 +204,8 @@ use yii\widgets\ListView;
                 <div class="col-md-4">
                     <div class="product-thumb">
                         <header class="product-header">
-                            <img src="/img/green_furniture_800x600.jpg" alt="Image Alternative text" title="Green Furniture">
+                            <img src="/img/green_furniture_800x600.jpg" alt="Image Alternative text"
+                                 title="Green Furniture">
                         </header>
                         <div class="product-inner">
                             <ul class="icon-group icon-list-rating" title="3/5 rating">
@@ -156,7 +240,8 @@ use yii\widgets\ListView;
                 <div class="col-md-4">
                     <div class="product-thumb">
                         <header class="product-header">
-                            <img src="/img/waipio_valley_800x600.jpg" alt="Image Alternative text" title="waipio valley">
+                            <img src="/img/waipio_valley_800x600.jpg" alt="Image Alternative text"
+                                 title="waipio valley">
                         </header>
                         <div class="product-inner">
                             <ul class="icon-group icon-list-rating icon-list-non-rated" title="not rated yet">
@@ -304,7 +389,8 @@ use yii\widgets\ListView;
                 <div class="col-md-4">
                     <div class="product-thumb">
                         <header class="product-header">
-                            <img src="/img/my_ice_cream_and_your_ice_cream_spoons_800x600.jpg" alt="Image Alternative text" title="My Ice Cream and Your Ice Cream Spoons">
+                            <img src="/img/my_ice_cream_and_your_ice_cream_spoons_800x600.jpg"
+                                 alt="Image Alternative text" title="My Ice Cream and Your Ice Cream Spoons">
                         </header>
                         <div class="product-inner">
                             <ul class="icon-group icon-list-rating" title="3.1/5 rating">
@@ -339,7 +425,8 @@ use yii\widgets\ListView;
                 <div class="col-md-4">
                     <div class="product-thumb">
                         <header class="product-header">
-                            <img src="/img/the_hidden_power_of_the_heart_800x600.jpg" alt="Image Alternative text" title="The Hidden Power of the Heart">
+                            <img src="/img/the_hidden_power_of_the_heart_800x600.jpg" alt="Image Alternative text"
+                                 title="The Hidden Power of the Heart">
                         </header>
                         <div class="product-inner">
                             <ul class="icon-group icon-list-rating" title="3.6/5 rating">
@@ -409,7 +496,8 @@ use yii\widgets\ListView;
                 <div class="col-md-4">
                     <div class="product-thumb">
                         <header class="product-header">
-                            <img src="/img/food_is_pride_800x600.jpg" alt="Image Alternative text" title="Food is Pride">
+                            <img src="/img/food_is_pride_800x600.jpg" alt="Image Alternative text"
+                                 title="Food is Pride">
                         </header>
                         <div class="product-inner">
                             <ul class="icon-group icon-list-rating" title="4.5/5 rating">
@@ -444,7 +532,8 @@ use yii\widgets\ListView;
                 <div class="col-md-4">
                     <div class="product-thumb">
                         <header class="product-header">
-                            <img src="/img/iphone_5_ipad_mini_ipad_3_800x600.jpg" alt="Image Alternative text" title="iPhone 5 iPad mini iPad 3">
+                            <img src="/img/iphone_5_ipad_mini_ipad_3_800x600.jpg" alt="Image Alternative text"
+                                 title="iPhone 5 iPad mini iPad 3">
                         </header>
                         <div class="product-inner">
                             <ul class="icon-group icon-list-rating" title="3.2/5 rating">
@@ -514,7 +603,8 @@ use yii\widgets\ListView;
                 <div class="col-md-4">
                     <div class="product-thumb">
                         <header class="product-header">
-                            <img src="/img/the_best_mode_of_transport_here_in_maldives_800x600.jpg" alt="Image Alternative text" title="the best mode of transport here in maldives">
+                            <img src="/img/the_best_mode_of_transport_here_in_maldives_800x600.jpg"
+                                 alt="Image Alternative text" title="the best mode of transport here in maldives">
                         </header>
                         <div class="product-inner">
                             <ul class="icon-group icon-list-rating icon-list-non-rated" title="not rated yet">
@@ -553,7 +643,8 @@ use yii\widgets\ListView;
                 <div class="col-md-4">
                     <div class="product-thumb">
                         <header class="product-header">
-                            <img src="/img/our_coffee_miss_u_800x600.jpg" alt="Image Alternative text" title="Our Coffee miss u">
+                            <img src="/img/our_coffee_miss_u_800x600.jpg" alt="Image Alternative text"
+                                 title="Our Coffee miss u">
                         </header>
                         <div class="product-inner">
                             <ul class="icon-group icon-list-rating" title="4.6/5 rating">
@@ -588,7 +679,8 @@ use yii\widgets\ListView;
                 <div class="col-md-4">
                     <div class="product-thumb">
                         <header class="product-header">
-                            <img src="/img/nikon_prime_love_800x600.jpg" alt="Image Alternative text" title="Nikon Prime love">
+                            <img src="/img/nikon_prime_love_800x600.jpg" alt="Image Alternative text"
+                                 title="Nikon Prime love">
                         </header>
                         <div class="product-inner">
                             <ul class="icon-group icon-list-rating icon-list-non-rated" title="not rated yet">
@@ -658,7 +750,8 @@ use yii\widgets\ListView;
                 <div class="col-md-4">
                     <div class="product-thumb">
                         <header class="product-header">
-                            <img src="/img/aspen_lounge_chair_800x600.jpg" alt="Image Alternative text" title="Aspen Lounge Chair">
+                            <img src="/img/aspen_lounge_chair_800x600.jpg" alt="Image Alternative text"
+                                 title="Aspen Lounge Chair">
                         </header>
                         <div class="product-inner">
                             <ul class="icon-group icon-list-rating" title="4.9/5 rating">

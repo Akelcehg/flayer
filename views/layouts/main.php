@@ -27,10 +27,10 @@ AppAsset::register($this);
 
     <?php echo $this->render('../partials/header.php') ?>
 
-    <div class="container">
-        <?= $content ?>
-    </div>
-    
+
+    <?= $content ?>
+
+
     <?php echo $this->render('../partials/footer.php') ?>
 
 </div>
