@@ -10,29 +10,49 @@ use \app\models\FlayerGroup;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="flayer-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+<div class="gap"></div>
 
-    <?= $form->field($model, 'image') ?>
+<div class="container">
+    <div class="row">
 
-    <?= $form->field($model, 'name') ?>
+        <?php echo $this->render('../partials/sidebar_links.php') ?>
 
-    <?= $form->field($model, 'type') ?>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-12" style="background-color: white;">
 
-    <?= $form->field($model, 'category')->dropDownList(
-        ArrayHelper::map(FlayerGroup::find()->all(), 'name', 'name'), ['prompt' => 'Категория флаера']); ?>
+                    <div class="flayer-form">
 
-    <?= $form->field($model, 'discount') ?>
+                        <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'description') ?>
+                        <?= $form->field($model, 'image') ?>
 
-    <?= $form->field($model, 'data_end') ?>
+                        <?= $form->field($model, 'name') ?>
 
-    <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+                        <?= $form->field($model, 'type') ?>
+
+                        <?= $form->field($model, 'category')->dropDownList(
+                            ArrayHelper::map(FlayerGroup::find()->all(), 'name', 'name'), ['prompt' => 'Категория флаера']); ?>
+
+                        <?= $form->field($model, 'discount') ?>
+
+                        <?= $form->field($model, 'description') ?>
+
+                        <?= $form->field($model, 'data_end') ?>
+
+                        <div class="form-group">
+                            <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+                        </div>
+
+                        <?php ActiveForm::end(); ?>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="gap"></div>
+        </div>
     </div>
-
-    <?php ActiveForm::end(); ?>
 
 </div>

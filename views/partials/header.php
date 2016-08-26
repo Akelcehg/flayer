@@ -60,7 +60,7 @@ use yii\widgets\Menu;
                         <li><a href="/admin"><i
                                     class="fa fa-edit"></i>Админка</a>
                         </li>
-                        <li><a href="/advertiser"><i
+                        <li><a href="/advertiser/statistics"><i
                                     class="fa fa-edit"></i>Рекламодатель</a>
                         </li>
                         <li><a href="/manager"><i

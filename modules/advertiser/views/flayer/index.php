@@ -3,48 +3,70 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 
-/* @var $this yii\web\View */
-/* @var $searchModel app\models\SearchFlayer */
-/* @var $dataProvider yii\data\ActiveDataProvider */
-
-$this->title = 'Flayers';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="flayer-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Create Flayer', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+<div class="gap"></div>
 
-            /*'_id',*/
-            //'image',
-            [
-                'attribute' => 'image',
-                'format' => 'html',
-                'label' => 'Изображение флаера',
-                'value' => function ($data) {
-                    return Html::img($data['image'],
-                        ['style' => [
-                            'width' => '250px'
-                        ]
-                        ]);
-                },
-            ],
-            'name',
-            'category',
-            'type',
-            'discount',
-            // 'data_end',
+<div class="container">
+    <div class="row">
 
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
+        <?php echo $this->render('../partials/sidebar_links.php') ?>
+
+        <div class="col-md-9">
+            <p>
+                <?= Html::a('Добавить флаер', ['create'], ['class' => 'btn btn-primary']) ?>
+            </p>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="table-responsive">
+                        <?= GridView::widget([
+                            'dataProvider' => $dataProvider,
+                            /*'filterModel' => $searchModel,*/
+                            'summary' => '',
+                            'columns' => [
+                                ['class' => 'yii\grid\SerialColumn'],
+                                /*'_id',*/
+                                //'image',
+                                [
+                                    'attribute' => 'image',
+                                    'contentOptions' => ['class' => 'table-order-img'],
+                                    'format' => 'html',
+                                    'label' => 'Изображение флаера',
+                                    'value' => function ($data) {
+                                        return Html::img($data['image']/*,
+                                        ['style' => [
+                                            'width' => '250px'
+                                        ]
+                                        ]*/);
+                                    },
+                                ],
+                                'name',
+                                'category',
+                                'type',
+                                'discount',
+                                // 'data_end',
+
+                                ['class' => 'yii\grid\ActionColumn'],
+                            ],
+                            'tableOptions' => [
+                                'class' => 'table table-order',
+                            ],
+                        ]); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="gap"></div>
+        </div>
+    </div>
+
 </div>
+
+
+<!--<h1><? /*= Html::encode($this->title) */ ?></h1>-->
+<?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+
+
+
+

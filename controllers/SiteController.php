@@ -66,8 +66,7 @@ class SiteController extends Controller
     public function actionIndex()
     {
         /*$searchModel = new SearchFlayer();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);*/
-
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);*/        
         return $this->render('index'/*, [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
