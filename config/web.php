@@ -30,7 +30,7 @@ $config = [
     'components' => [
         'mongodb' => [
             'class' => '\yii\mongodb\Connection',
-            'dsn' => 'mongodb://localhost:27017/flayer',
+            'dsn' => 'mongodb://root:123456@ds145355.mlab.com:45355/flayer',
         ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation

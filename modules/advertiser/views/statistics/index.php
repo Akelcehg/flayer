@@ -171,6 +171,7 @@
                                     <i class="fa fa-fw fa-calendar"></i> Calendar updated
                                 </a>
 
+
                                 <a href="#" class="list-group-item">
                                     <span class="badge">23 minutes ago</span>
                                     <i class="fa fa-fw fa-truck"></i> Order 392 shipped
