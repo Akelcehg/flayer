@@ -33,11 +33,11 @@ use yii\grid\GridView;
                                 'format' => 'html',
                                 'label' => 'Изображение флаера',
                                 'value' => function ($data) {
-                                    return Html::img($data['image']/*,
+                                    return Html::img('/img/f/' . $data['image'],
                                         ['style' => [
-                                            'width' => '250px'
+                                            'width' => '200px'
                                         ]
-                                        ]*/);
+                                        ]);
                                 },
                             ],
                             'name',

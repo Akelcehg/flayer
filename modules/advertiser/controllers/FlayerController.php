@@ -9,6 +9,7 @@ use app\models\SearchFlayer;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * FlayerController implements the CRUD actions for Flayer model.
@@ -66,9 +67,16 @@ class FlayerController extends Controller
     {
         $model = new Flayer();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            FlayerGroup::updateAllCounters(['count' => 1], ['name' => $model->category]);
-            return $this->redirect(['view', 'id' => (string)$model->_id]);
+        if ($model->load(Yii::$app->request->post())) {
+            $file = UploadedFile::getInstance($model, 'image');
+            $hash = md5($file->name);
+            //$model->image = "{$hash}-{$file->name}";
+            $model->image = $hash.'.'.$file->extension;
+            if ($model->save()) {
+                $file->saveAs('img/f/'.$model->image);
+                FlayerGroup::updateAllCounters(['count' => 1], ['name' => $model->category]);
+                return $this->redirect(['view', 'id' => (string)$model->_id]);
+            }
         } else {
             return $this->render('create', [
                 'model' => $model,

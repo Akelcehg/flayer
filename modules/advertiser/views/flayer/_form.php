@@ -21,9 +21,11 @@ use \app\models\FlayerGroup;
 
                 <div class="flayer-form">
 
-                    <?php $form = ActiveForm::begin(); ?>
+                    <?php $form = ActiveForm::begin([
+                        'options'=>['enctype'=>'multipart/form-data']
+                    ]); ?>
 
-                    <?= $form->field($model, 'image') ?>
+                    <?= $form->field($model, 'image')->fileInput()->label('')?>
 
                     <?= $form->field($model, 'name') ?>
 

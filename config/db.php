@@ -2,6 +2,7 @@
 
 return [
     'class' => '\yii\mongodb\Connection',
+    'dsn' => 'mongodb://root:123456@ds145355.mlab.com:45355/flayer',
     /*'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=localhost;dbname=yii2basic',
     'username' => 'root',

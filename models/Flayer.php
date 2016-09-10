@@ -10,6 +10,7 @@ use Yii;
  * @property \MongoId|string $_id
  * @property mixed $image
  * @property mixed $name
+ * @property array $filename
  * @property mixed $type
  * @property mixed $discount
  * @property mixed $description
@@ -68,5 +69,10 @@ class Flayer extends \yii\mongodb\ActiveRecord
             'description' => 'Description',
             'data_end' => 'Data End',
         ];
+    }
+
+    public function slug()
+    {
+        return 'img/f/' . $this->image;
     }
 }

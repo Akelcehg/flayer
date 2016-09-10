@@ -24,3 +24,13 @@ class m160808_202231_create_flayer_groups extends \yii\mongodb\Migration
         $this->dropCollection('flayer_groups');
     }
 }
+/*
+ * # creates a new migration named 'create_user_collection'
+yii mongodb-migrate/create create_user_collection
+
+# applies ALL new migrations
+yii mongodb-migrate
+
+# reverts the last applied migration
+yii mongodb-migrate/down
+ * */
