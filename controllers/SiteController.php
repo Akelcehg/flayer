@@ -67,11 +67,11 @@ class SiteController extends Controller
     {
         /*$searchModel = new SearchFlayer();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);*/        
-        return $this->render('index'/*, [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+        return $this->render('index', [
+         /*   'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,*/
             'flayerGroups' => FlayerGroup::getFlayerGroupsAndCount(),
-        ]*/);
+        ]);
     }
 
     /**

@@ -1,7 +1,17 @@
 <header class="main main-color">
     <div class="container">
         <ul class="nav nav-pills flexnav flexnav-icons flexnav-center lg-screen" id="flexnav">
-            <li><a href="#"><i class="fa fa-cutlery"></i>Food &amp; Drink</a>
+
+            <?php foreach ($flayerGroups as $group): ?>
+
+                <?php echo '<li>
+                        <a href="/category/' . $group['name'] . '">
+                        <i class="fa fa-cutlery"></i>' . $group['name'] . '</a>
+                    </li>'; ?>
+
+            <?php endforeach; ?>
+
+            <!--<li><a href="#"><i class="fa fa-cutlery"></i>Food &amp; Drink</a>
             </li>
             <li><a href="#"><i class="fa fa-calendar"></i>Events</a>
             </li>
@@ -18,7 +28,7 @@
             <li><a href="#"><i class="fa fa-shopping-cart"></i>Shopping</a>
             </li>
             <li><a href="#"><i class="fa fa-home"></i>Home &amp; Graden</a>
-            </li>
+            </li>-->
         </ul>
     </div>
 </header>

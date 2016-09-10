@@ -15,7 +15,7 @@ use yii\helpers\Url;
     <ul class="nav nav-pills nav-stacked">
         <li class="parent"><a href="#"><i class="fa fa-suitcase"></i> <span>Флаера</span></a>
             <ul class="children">
-                <li><a href="alerts.html">Список флаеров</a></li>
+                <li><a href="<?=Url::to('/admin/flayer')?>">Список флаеров</a></li>
                 <li><a href="<?=Url::to('/admin/flayer-group')?>">Категории флаеров</a></li>
             </ul>
         </li>

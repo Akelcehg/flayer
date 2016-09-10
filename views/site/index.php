@@ -1,5 +1,7 @@
 
-<?php echo $this->render('../partials/directory.php') ?>
+<?php echo $this->render('../partials/directory.php',[
+    'flayerGroups' => $flayerGroups,
+]) ?>
 
 <div class="gap"></div>
 
