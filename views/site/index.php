@@ -1,5 +1,4 @@
-
-<?php echo $this->render('../partials/directory.php',[
+<?php echo $this->render('../partials/directory.php', [
     'flayerGroups' => $flayerGroups,
 ]) ?>
 
@@ -127,9 +126,12 @@
     <div class="text-center">
         <h1 class="mb20">New Arrivals</h1>
         <div class="row row-wrap">
+
+
             <div class="col-md-3">
                 <div class="product-thumb">
                     <header class="product-header">
+                        <p class="coupon-category-icon">70 %</p>
                         <img src="img/the_best_mode_of_transport_here_in_maldives_800x600.jpg"
                              alt="Image Alternative text" title="the best mode of transport here in maldives">
                     </header>
