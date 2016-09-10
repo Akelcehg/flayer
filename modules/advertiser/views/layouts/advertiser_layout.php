@@ -22,9 +22,7 @@ AdvertiserAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-
-
-<?php echo $this->render('../partials/navbar.php') ?>
+<?php /*echo $this->render('../partials/navbar.php') */ ?>
 <?php echo $this->render('../partials/mainbar.php') ?>
 
 <div class="container-fluid">

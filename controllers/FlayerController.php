@@ -20,5 +20,10 @@ class FlayerController extends Controller
             'dataProvider' => $dataProvider,
             'flayerGroups' => FlayerGroup::getFlayerGroupsAndCount(),
         ]);
-    }    
+    }
+
+    public function actionList()
+    {
+        return "dsa";
+    }
 }
