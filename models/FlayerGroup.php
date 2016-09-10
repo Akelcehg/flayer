@@ -39,7 +39,9 @@ class FlayerGroup extends \yii\mongodb\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'count', 'icon'], 'safe']
+            [['name', 'count', 'icon'], 'safe'],
+            ['count', 'number'],
+            ['count', 'default', 'value' => 0],
         ];
     }
 
