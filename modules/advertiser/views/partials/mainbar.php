@@ -1,3 +1,7 @@
+<?php
+use yii\helpers\Url;
+
+?>
 <div class="mainbar">
 
     <div class="container">
@@ -20,6 +24,21 @@
                 <li class="dropdown ">
                     <a href="#about" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
                         <i class="fa fa-desktop"></i>
+                        Флаера
+                        <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="<?= Url::to('/advertiser/flayer') ?>"><i class="fa fa-user nav-icon"></i> Мои
+                                флаера</a></li>
+                        <li><a href="<?= Url::to('/advertiser/flayer/create') ?>"><i class="fa fa-user nav-icon"></i>
+                                Добавить флаер</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown ">
+                    <a href="#about" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                        <i class="fa fa-desktop"></i>
                         UI Features
                         <span class="caret"></span>
                     </a>
@@ -27,7 +46,8 @@
                     <ul class="dropdown-menu">
                         <li><a href="./ui-buttons.html"><i class="fa fa-user nav-icon"></i> Buttons</a></li>
                         <li><a href="./ui-tabs.html"><i class="fa fa-bars nav-icon"></i> Tabs & Accordions</a></li>
-                        <li><a href="./ui-notifications.html"><i class="fa fa-asterisk nav-icon"></i> Popups / Notifications</a></li>
+                        <li><a href="./ui-notifications.html"><i class="fa fa-asterisk nav-icon"></i> Popups /
+                                Notifications</a></li>
                         <li><a href="./ui-sliders.html"><i class="fa fa-tasks nav-icon"></i> Sliders</a></li>
                         <li><a href="./ui-typography.html"><i class="fa fa-font nav-icon"></i> Typography</a></li>
                         <li><a href="./ui-portlets.html"><i class="fa fa-list-alt nav-icon"></i> Portlets</a></li>

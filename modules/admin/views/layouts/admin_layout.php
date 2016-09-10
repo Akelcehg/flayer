@@ -53,15 +53,15 @@ AdminAsset::register($this);
         </div>
     </div>
 </section>
-<script src="js/admin/jquery-1.11.1.min.js"></script>
-<script src="js/admin/jquery-migrate-1.2.1.min.js"></script>
-<script src="js/admin/bootstrap.min.js"></script>
-<script src="js/admin/modernizr.min.js"></script>
-<script src="js/admin/pace.min.js"></script>
-<script src="js/admin/retina.min.js"></script>
-<script src="js/admin/jquery.cookies.js"></script>
+<script src="/js/admin/jquery-1.11.1.min.js"></script>
+<script src="/js/admin/jquery-migrate-1.2.1.min.js"></script>
+<script src="/js/admin/bootstrap.min.js"></script>
+<script src="/js/admin/modernizr.min.js"></script>
+<script src="/js/admin/pace.min.js"></script>
+<script src="/js/admin/retina.min.js"></script>
+<script src="/js/admin/jquery.cookies.js"></script>
 
-<script src="js/admin/custom.js"></script>
+<script src="/js/admin/custom.js"></script>
 
 <?php $this->endBody() ?>
 </body>

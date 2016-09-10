@@ -16,43 +16,40 @@ use \app\models\FlayerGroup;
 <div class="container">
     <div class="row">
 
-        <?php echo $this->render('../partials/sidebar_links.php') ?>
+        <div class="row">
+            <div class="col-md-12" style="background-color: white;">
 
-        <div class="col-md-9">
-            <div class="row">
-                <div class="col-md-12" style="background-color: white;">
+                <div class="flayer-form">
 
-                    <div class="flayer-form">
+                    <?php $form = ActiveForm::begin(); ?>
 
-                        <?php $form = ActiveForm::begin(); ?>
+                    <?= $form->field($model, 'image') ?>
 
-                        <?= $form->field($model, 'image') ?>
+                    <?= $form->field($model, 'name') ?>
 
-                        <?= $form->field($model, 'name') ?>
+                    <?= $form->field($model, 'type') ?>
 
-                        <?= $form->field($model, 'type') ?>
+                    <?= $form->field($model, 'category')->dropDownList(
+                        ArrayHelper::map(FlayerGroup::find()->all(), 'name', 'name'), ['prompt' => 'Категория флаера']); ?>
 
-                        <?= $form->field($model, 'category')->dropDownList(
-                            ArrayHelper::map(FlayerGroup::find()->all(), 'name', 'name'), ['prompt' => 'Категория флаера']); ?>
+                    <?= $form->field($model, 'discount') ?>
 
-                        <?= $form->field($model, 'discount') ?>
+                    <?= $form->field($model, 'description') ?>
 
-                        <?= $form->field($model, 'description') ?>
+                    <?= $form->field($model, 'data_end') ?>
 
-                        <?= $form->field($model, 'data_end') ?>
-
-                        <div class="form-group">
-                            <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-                        </div>
-
-                        <?php ActiveForm::end(); ?>
-
+                    <div class="form-group">
+                        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
                     </div>
 
+                    <?php ActiveForm::end(); ?>
+
                 </div>
+
             </div>
-            <div class="gap"></div>
         </div>
+        <div class="gap"></div>
+
     </div>
 
 </div>

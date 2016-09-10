@@ -1,7 +1,10 @@
+<?php
+use yii\helpers\Url;
+?>
 <div class="leftpanel">
     <div class="media profile-left">
         <a class="pull-left profile-thumb" href="profile.html">
-            <img class="img-circle" src="img/admin/photos/profile.png" alt="">
+            <img class="img-circle" src="/img/admin/photos/profile.png" alt="">
         </a>
         <div class="media-body">
             <h4 class="media-heading">Elen Adarna</h4>
@@ -10,6 +13,12 @@
     </div><!-- media -->
     <h5 class="leftpanel-title">Navigation</h5>
     <ul class="nav nav-pills nav-stacked">
+        <li class="parent"><a href="#"><i class="fa fa-suitcase"></i> <span>Флаера</span></a>
+            <ul class="children">
+                <li><a href="alerts.html">Список флаеров</a></li>
+                <li><a href="<?=Url::to('/admin/flayer-group')?>">Категории флаеров</a></li>
+            </ul>
+        </li>
         <li><a href="index.html"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
         <li><a href="messages.html"><span class="pull-right badge">5</span><i class="fa fa-envelope-o"></i> <span>Messages</span></a>
         </li>
