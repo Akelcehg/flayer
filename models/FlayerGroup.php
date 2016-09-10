@@ -29,6 +29,7 @@ class FlayerGroup extends \yii\mongodb\ActiveRecord
             '_id',
             'name',
             'count',
+            'icon',
         ];
     }
 
@@ -38,7 +39,7 @@ class FlayerGroup extends \yii\mongodb\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'count'], 'safe']
+            [['name', 'count', 'icon'], 'safe']
         ];
     }
 
@@ -50,6 +51,7 @@ class FlayerGroup extends \yii\mongodb\ActiveRecord
         return [
             '_id' => 'ID',
             'name' => 'Name',
+            'icon' => 'Логотип',
             'count' => 'Count'
         ];
     }

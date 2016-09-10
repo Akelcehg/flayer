@@ -6,7 +6,7 @@
 
                 <?php echo '<li>
                         <a href="/category/' . $group['name'] . '">
-                        <i class="fa fa-cutlery"></i>' . $group['name'] . '</a>
+                        <i class="'.$group['icon'].'"></i>' . $group['name'] . '</a>
                     </li>'; ?>
 
             <?php endforeach; ?>
