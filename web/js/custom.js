@@ -248,7 +248,7 @@ $('.bg-parallax').each(function() {
 $(document).ready(function() {
 
 
-    $('html').niceScroll({
+/*    $('html').niceScroll({
         cursorcolor: "#000",
         cursorborder: "0px solid #fff",
         railpadding: {
@@ -264,7 +264,7 @@ $(document).ready(function() {
         boxzoom: true,
         horizrailenabled: false,
         zindex: 9999
-    });
+    });*/
 
 
     // Owl Carousel
