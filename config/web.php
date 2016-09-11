@@ -71,6 +71,7 @@ $config = [
             'rules' => [
                 '<alias:login|register>' => 'site/<alias>',
                 'category/<name>' => 'category/index',
+                'flayer/<name>' => 'flayer/description',
             ],
         ],
 

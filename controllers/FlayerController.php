@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Flayer;
 use app\models\FlayerGroup;
 use app\models\SearchFlayer;
 use Yii;
@@ -22,8 +23,11 @@ class FlayerController extends Controller
         ]);
     }
 
-    public function actionList()
+    public function actionDescription($name)
     {
-        return "dsa";
+
+        return $this->render('description', [
+            'flayer' => Flayer::findOne(['name' => $name])
+        ]);
     }
 }

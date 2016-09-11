@@ -1,4 +1,6 @@
-<?php echo $this->render('../partials/directory.php', [
+<?php use yii\widgets\ListView;
+
+echo $this->render('../partials/directory.php', [
     'flayerGroups' => $flayerGroups,
 ]) ?>
 
@@ -124,11 +126,14 @@
 
 <div class="container">
     <div class="text-center">
-        <h1 class="mb20">New Arrivals</h1>
+        <h1 class="mb20">Последние добавленные</h1>
         <div class="row row-wrap">
 
+            <?php foreach ($flayersList as $flayer):?>
+                <?=$this->render('_flayer_item',['flayer'=>$flayer])?>
+            <?php endforeach;?>
 
-            <div class="col-md-3">
+<!--            <div class="col-md-3">
                 <div class="product-thumb">
                     <header class="product-header">
                         <p class="coupon-category-icon">70 %</p>
@@ -415,7 +420,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
         <a href="/flayer" class="btn btn-primary">Посмотреть все флаера</a>
     </div>

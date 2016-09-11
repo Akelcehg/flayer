@@ -66,10 +66,13 @@ class SiteController extends Controller
     public function actionIndex()
     {
         /*$searchModel = new SearchFlayer();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);*/        
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->pagination->pageSize = 8;*/
         return $this->render('index', [
-         /*   'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,*/
+            /*   'searchModel' => $searchModel,
+               'dataProvider' => $dataProvider,*/
+            'flayersList' => Flayer::find()->limit(8)->all(),
+            //'flayersList' => $dataProvider,
             'flayerGroups' => FlayerGroup::getFlayerGroupsAndCount(),
         ]);
     }
