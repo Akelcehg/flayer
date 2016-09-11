@@ -90,6 +90,7 @@ $('#flexnav').flexNav();
 
 
 // Lighbox text
+/*
 $('.popup-text').magnificPopup({
     removalDelay: 500,
     closeBtnInside: true,
@@ -100,8 +101,10 @@ $('.popup-text').magnificPopup({
     },
     midClick: true
 });
+*/
 
 // Lightbox iframe
+/*
 $('.popup-iframe').magnificPopup({
     dispableOn: 700,
     type: 'iframe',
@@ -109,6 +112,7 @@ $('.popup-iframe').magnificPopup({
     mainClass: 'mfp-fade',
     preloader: false
 });
+*/
 
 
 $('#star-rating > li').each(function() {
@@ -140,11 +144,12 @@ $('#star-rating > li').each(function() {
 
 
 // Bootstrap tooltips
-$('[data-toggle="tooltip"]').tooltip();
+//$('[data-toggle="tooltip"]').tooltip();
 
 
 
 // Twitter
+/*
 $("#twitter").tweet({
     username: TWITTER_USERNAME,
     count: 3
@@ -155,6 +160,7 @@ $("#twitter-ticker").tweet({
     page: 1,
     count: 20
 });
+*/
 
 
 // Checkboxes and radio
@@ -183,9 +189,9 @@ $(".cart-item-minus").click(function() {
 
 
 // Card form
-$('.form-group-cc-number input').payment('formatCardNumber');
+/*$('.form-group-cc-number input').payment('formatCardNumber');
 $('.form-group-cc-date input').payment('formatCardExpiry');
-$('.form-group-cc-cvc input').payment('formatCardCVC');
+$('.form-group-cc-cvc input').payment('formatCardCVC');*/
 
 
 // Google map
@@ -262,7 +268,7 @@ $(document).ready(function() {
 
 
     // Owl Carousel
-    var owlCarousel = $('#owl-carousel'),
+/*    var owlCarousel = $('#owl-carousel'),
         owlItems = owlCarousel.attr('data-items'),
         owlCarouselSlider = $('#owl-carousel-slider'),
         owlNav = owlCarouselSlider.attr('data-nav');
@@ -283,7 +289,7 @@ $(document).ready(function() {
         navigationText: ['', ''],
         transitionStyle: 'goDown',
         // autoPlay: 4500
-    });
+    });*/
 
 
     // Twitter Ticker
@@ -305,11 +311,11 @@ $(document).ready(function() {
      // footer always on bottom
     var docHeight = $(window).height();
    var footerHeight = $('#main-footer').height();
-   var footerTop = $('#main-footer').position().top + footerHeight;
+   //var footerTop = $('#main-footer').position().top + footerHeight;
 
-   if (footerTop < docHeight) {
+   /*if (footerTop < docHeight) {
     $('#main-footer').css('margin-top', (docHeight - footerTop) + 'px');
-   }
+   }*/
 
 });
 
@@ -337,14 +343,15 @@ $('#popup-gallery').each(function() {
 });
 
 // Lighbox image
-$('.popup-image').magnificPopup({
+/*$('.popup-image').magnificPopup({
     type: 'image'
-});
+});*/
 
+/*
 $(window).load(function() {
     if ($(window).width() > 992) {
         $('#masonry').masonry({
             itemSelector: '.col-masonry'
         });
     }
-});
+});*/

@@ -25,12 +25,13 @@ class AppAsset extends AssetBundle
         'css/orient.css'
     ];
     public $js = [
+        'js/bootstrap.js',
         'js/flexnav.min.js',
         'js/icheck.js',
         'js/nicescroll.js',
         'js/ionrangeslider.js',
-        'js/magnific.min.js',
-        'js/custom.js'
+        //'js/magnific.min.js',
+        'js/custom.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

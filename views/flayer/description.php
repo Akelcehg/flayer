@@ -165,17 +165,7 @@
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane fade active in" id="tab-1">
-                        <p>Vel dictumst interdum nam risus viverra aenean nostra lobortis class malesuada et himenaeos
-                            vivamus ullamcorper quis fermentum nostra taciti sagittis per lobortis libero neque eros
-                            massa erat suspendisse laoreet dolor id sociis aliquam mauris justo eleifend interdum
-                            ultricies litora est inceptos inceptos condimentum penatibus gravida in lectus nunc class
-                            tincidunt</p>
-                        <p>At tortor viverra habitasse auctor pharetra tempor quam ante placerat class mus commodo cum
-                            magna primis sed risus interdum purus et scelerisque porta natoque blandit ultricies platea
-                            phasellus gravida id</p>
-                        <p>Eleifend aliquet odio tempus pharetra congue at orci suspendisse taciti duis imperdiet
-                            conubia risus dictumst fringilla fermentum sem nascetur dis sagittis lectus libero dolor
-                            himenaeos nullam lectus at interdum sodales</p>
+                        <p><?=$flayer['description']?></p>
                     </div>
                     <div class="tab-pane fade" id="tab-2">
                         <table class="table table-striped mb0">
